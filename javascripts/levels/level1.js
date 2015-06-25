@@ -10,12 +10,12 @@
   });
 
   var height2Left = new Science.Platform({
-    pos: [100, 120],
+    pos: [100, 480],
     length: 200
   });
 
   var height2Right = new Science.Platform({
-    pos: [500, 120],
+    pos: [500, 480],
     length: 200
   });
 
