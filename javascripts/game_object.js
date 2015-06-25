@@ -5,8 +5,21 @@
   }
 
   var GameObject = Science.GameObject = function (options) {
+    this.height = options.height;
+    this.width = options.width;
+    this.pos = options.pos;
+    this.game = options.game;
+    this.vel = 0;
 
   };
+
+  GameObject.prototype.move = function () {
+    var targetPos = [this.pos[0] + this.vel[0], this.pos[1] + this.vel[1]];
+
+    var path = this.pathToNextPos(targetPos);
+    this.pos = this.game.nextLegalPos(path);
+  };
+
 
   GameObject.prototype.pathToNextPos = function (nextPos) {
     // return path of pixels between current and next position

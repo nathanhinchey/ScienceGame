@@ -4,19 +4,19 @@
     window.Science = {};
   }
 
-  var THICKNESS = 5;
+  var HEIGHT = 5;
 
   var Platform = Science.Platform = function(options){
-    this.length = options.length;
+    this.width = options.width;
     this.pos = options.pos;
-    this.thickness = THICKNESS;
+    this.height = HEIGHT;
   };
 
   Platform.prototype.draw = function(ctx){
-    ctx.lineWidth = this.thickness;
+    ctx.lineWidth = this.height;
     ctx.beginPath();
     ctx.moveTo(this.pos[0], this.pos[1]);
-    ctx.lineTo(this.pos[0] + this.length, this.pos[1]);
+    ctx.lineTo(this.pos[0] + this.width, this.pos[1]);
     ctx.stroke();
   };
 }());
