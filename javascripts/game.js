@@ -44,4 +44,15 @@
     this.setPlatformPixels();
     this.draw(ctx);
   };
+
+  document.onkeydown (event) {
+    // if left, start moving left
+    if (event.keyCode === '37') {
+      
+    }
+  };
+
+  document.onkeyup (event) {
+    // if left, stop moving left
+  }
 }());

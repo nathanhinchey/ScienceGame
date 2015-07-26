@@ -43,6 +43,7 @@
   };
 
   GameObject.prototype.draw = function (ctx) {
-    ctx.drawImage(this.currentSprite, this.pos[0], this.pos[1]);
+    //ctx.drawImage(this.currentSprite, this.pos[0], this.pos[1]);
+    ctx.fillRect(this.pos[0], this.pos[1], 50, 50);
   };
 }());
